@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='About us.css') }}">
     <title>Your Website</title>
 </head>
 
 <body>
     <div class="background"></div>
-
+    <!-- navbar Section -->
     <div class="navbar">
         <div class="navbar-left">
             {% if username %}
@@ -28,7 +28,9 @@
         </div>
         <div class="navbar-middle">
             <a href="{{ url_for('home') }}">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M3 12l9 6l9 -6l-2 -6h-14l-2 6z" />
                 </svg>
@@ -47,16 +49,18 @@
             </a>
 
             <a href="{{ url_for('skill') }}">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 15l4 4a1.5 1.5 0 0 0 2 -2l-4 -4" />
                     <line x1="3" y1="21" x2="17" y2="21" />
                     <line x1="7" y1="21" x2="7" y2="17" />
                     <path d="M11 3a5 5 0 0 1 5 5a5 5 0 0 1 -5 5" />
-                </svg> 
+                </svg>
                 <span>Skills</span>
             </a>
-            
+
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24"
                     height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -96,6 +100,67 @@
         <p>Welcome, {{ username }}</p>
         <!-- Add any additional profile information or actions here -->
     </div>
+
+
+
+   <!-- About Section Start -->
+<section class="about" id="about">
+    <div class="content">
+        <div class="title" id="abt">
+            <span>About Me</span>
+        </div>
+        <div class="about-details">
+            <div class="left">
+                <img src="../static/images/about.png" alt="About Me Image" />
+            </div>
+            <div class="right">
+                <div class="topic">It's never too late</div>
+                <p>
+                    Driven Data Scientist with a strong foundation in applied AI, machine learning, and deep learning. Demonstrated expertise in developing end-to-end data solutions, from data cleaning and processing to algorithm development and deployment. Skilled in ANN, CNN, and NLP with a solid background in statistical modeling and business strategy. My leadership roles at IEEE and industry exposure through a CodSoft internship highlight my collaborative abilities. Secured first place at Sin23 and Amity Youth Hackathon 2024, demonstrating exceptional skills and innovative thinking, leading to an increase in user engagement for the proposed solution.
+                </p>
+                <p>
+                    <strong>Birth Date:</strong> June 29, 2002<br>
+                    <strong>Birth Place:</strong> Jamshedpur Tatanagar<br>
+                    <strong>Currently Living:</strong> Delhi<br>
+                    <strong>College:</strong> Maharaja Agrasen Institute of Technology
+                </p>
+                <div class="button" data-tooltip="Size: 20Mb">
+                    <div class="button-wrapper">
+                        <div class="text">Download</div>
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                                </path>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>

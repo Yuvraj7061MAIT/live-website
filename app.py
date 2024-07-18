@@ -38,7 +38,7 @@ def register():
         new_user = User(email=email, password=password, username=username)
         db.session.add(new_user)
         db.session.commit()
-        return redirect("/login")
+        return redirect(url_for('login'))
     return render_template('register.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -50,7 +50,7 @@ def login():
         if user and user.check_password(password):
             session['username'] = user.username
             session['email'] = user.email
-            return redirect("/")
+            return redirect(url_for('index'))
         else:
             return "Invalid email or password!"
     return render_template('login.html')
@@ -58,7 +58,21 @@ def login():
 @app.route('/logout', methods=['POST'])
 def logout():
     session.clear()  # Clear all session data
-    return redirect("/")
+    return redirect(url_for('login'))
+
+# Components of pages
+
+@app.route('/home')
+def home():
+    return redirect(url_for('index'))
+
+@app.route('/about')
+def about():
+    return render_template('About us.html')
+
+@app.route('/skill')
+def skill():
+    return render_template('skill.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
